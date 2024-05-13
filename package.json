@@ -1,0 +1,32 @@
+{
+  "name": "@apiverve/salestax",
+  "version": "1.0.0",
+  "description": "Sales Tax Lookup is a simple tool for looking up the sales tax rate of a location. It returns the sales tax rate and the jurisdiction.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/salestax-API.git"
+  },
+  "keywords": [
+    "sales tax"," sales tax lookup"," sales tax api"," sales tax tool"," sales tax software"," sales tax service"," sales tax library"," sales tax sdk"," sales tax code"," sales tax script"," sales tax program"," sales tax application"," sales tax app"," sales tax utility"," sales tax helper"," sales tax helper tool"," sales tax helper software"," sales tax helper service"," sales tax helper library"," sales tax helper sdk"," sales tax helper code"," sales tax helper script"," sales tax helper program"," sales tax helper application"," sales tax helper app"," sales tax helper tool"," sales tax helper utility"," sales tax helper"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/salestax-API/issues"
+  },
+  "homepage": "https://github.com/apiverve/salestax-API",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "chai": "^3.4.1",
+    "dotenv": "^2.0.0"
+  },
+  "dependencies": {
+    "node-fetch": "3.3.2",
+    "promise": "^7.1.1",
+    "request": "^2.69.0"
+  }
+}
