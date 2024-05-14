@@ -11,7 +11,7 @@
     "url": "git+https://github.com/apiverve/salestax-API.git"
   },
   "keywords": [
-    "sales tax"," sales tax lookup"," sales tax api"," sales tax tool"," sales tax software"," sales tax service"," sales tax library"," sales tax sdk"," sales tax code"," sales tax script"," sales tax program"," sales tax application"," sales tax app"," sales tax utility"," sales tax helper"," sales tax helper tool"," sales tax helper software"," sales tax helper service"," sales tax helper library"," sales tax helper sdk"," sales tax helper code"," sales tax helper script"," sales tax helper program"," sales tax helper application"," sales tax helper app"," sales tax helper tool"," sales tax helper utility"," sales tax helper"
+    "sales tax","sales tax lookup","sales tax api","sales tax tool","sales tax software"
   ],
   "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
   "license": "MIT",
@@ -27,6 +27,6 @@
   "dependencies": {
     "node-fetch": "3.3.2",
     "promise": "^7.1.1",
-    "request": "^2.69.0"
+    "axios": "^0.15.3"
   }
 }
