@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/salestax",
-  "version": "1.0.2",
-  "description": "Sales Tax Lookup is a simple tool for looking up the sales tax rate of a location. It returns the sales tax rate and the jurisdiction.",
+  "version": "1.0.3",
+  "description": "Sales Tax Lookup is a simple tool for looking up the sales tax rate of a location. It returns the sales tax rate.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
