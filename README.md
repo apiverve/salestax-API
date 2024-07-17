@@ -1,7 +1,7 @@
 Sales Tax Lookup API
 ============
 
-Sales Tax Lookup is a simple tool for looking up the sales tax rate of a location. It returns the sales tax rate and the jurisdiction.
+Sales Tax Lookup is a simple tool for looking up the sales tax rate of a location. It returns the sales tax rate.
 
 ![Build Status](https://img.shields.io/badge/build-passing-green)
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
