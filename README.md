@@ -1,5 +1,4 @@
-Sales Tax Lookup API
-============
+# Sales Tax Lookup API
 
 Sales Tax Lookup is a simple tool for looking up the sales tax rate of a location. It returns the sales tax rate.
 
@@ -7,54 +6,62 @@ Sales Tax Lookup is a simple tool for looking up the sales tax rate of a locatio
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Javascript Wrapper for the [Sales Tax Lookup API](https://apiverve.com/marketplace/api/salestax)
+This is a Javascript Wrapper for the [Sales Tax Lookup API](https://apiverve.com/marketplace/salestax)
 
 ---
 
 ## Installation
-	npm install @apiverve/salestax --save
+
+Using npm:
+```shell
+npm install @apiverve/salestax
+```
+
+Using yarn:
+```shell
+yarn add @apiverve/salestax
+```
 
 ---
 
 ## Configuration
 
-Before using the salestax API client, you have to setup your account and obtain your API Key.  
+Before using the Sales Tax Lookup API client, you have to setup your account and obtain your API Key.
 You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ---
 
-## Usage
+## Quick Start
 
-The Sales Tax Lookup API documentation is found here: [https://docs.apiverve.com/api/salestax](https://docs.apiverve.com/api/salestax).  
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart)
+
+The Sales Tax Lookup API documentation is found here: [https://docs.apiverve.com/ref/salestax](https://docs.apiverve.com/ref/salestax).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
-```
-var salestaxAPI = require('@apiverve/salestax');
-var api = new salestaxAPI({
-    api_key: [YOUR_API_KEY],
-    secure: true //(Optional, defaults to true)
+```javascript
+const salestaxAPI = require('@apiverve/salestax');
+const api = new salestaxAPI({
+    api_key: '[YOUR_API_KEY]'
 });
 ```
 
 ---
 
+## Usage
+
+---
 
 ### Perform Request
-Using the API client, you can perform requests to the API.
 
-###### Define Query
+Using the API is simple. All you have to do is make a request. The API will return a response with the data you requested.
 
-```
+```javascript
 var query = {
   zip: "90210"
 };
-```
 
-###### Simple Request (using Callback)
-
-```
 api.execute(query, function (error, data) {
     if (error) {
         return console.error(error);
@@ -64,9 +71,52 @@ api.execute(query, function (error, data) {
 });
 ```
 
-###### Example Response
+---
 
+### Using Promises
+
+You can also use promises to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+var query = {
+  zip: "90210"
+};
+
+api.execute(query)
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error(error);
+    });
 ```
+
+---
+
+### Using Async/Await
+
+You can also use async/await to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+async function makeRequest() {
+    var query = {
+  zip: "90210"
+};
+
+    try {
+        const data = await api.execute(query);
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+```
+
+---
+
+## Example Response
+
+```json
 {
   "status": "ok",
   "error": null,
@@ -78,8 +128,7 @@ api.execute(query, function (error, data) {
     "county": 0.0025,
     "city": 0.0075,
     "special": 0.0325
-  },
-  "code": 200
+  }
 }
 ```
 
@@ -92,6 +141,7 @@ Need any assistance? [Get in touch with Customer Support](https://apiverve.com/c
 ---
 
 ## Updates
+
 Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Twitter.
 
 ---
