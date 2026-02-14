@@ -1,32 +1,34 @@
 openapi: 3.0.4
 info:
   title: Sales Tax Lookup
-  description: Sales Tax Lookup is a simple tool for looking up the sales tax rate of a location. It returns the sales tax rate.
+  description: >-
+    Sales Tax Lookup is a simple tool for looking up the sales tax rate of a
+    location. It returns the sales tax rate.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/salestax:
     get:
       summary: Lookup Sales Tax of Zip Code
-      description: Sales Tax Lookup is a simple tool for looking up the sales tax rate of a location. It returns the sales tax rate.
+      description: Lookup the sales tax rate of a location based on the zip code
       operationId: salestax
       parameters:
-      - name: zip
-        in: query
-        schema:
-          type: string
-        required: true
-        description: The zip code for which you want to get the sales tax rate (e.g., 90210)
-        example: '90210'
+        - name: zip
+          in: query
+          schema:
+            type: string
+          required: true
+          description: The zip code for which you want to get the sales tax rate
+          example: '64082'
       responses:
         '200':
           description: Successful Response
@@ -42,11 +44,11 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   state: CA
                   zip: 90210
@@ -60,7 +62,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -68,4 +70,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
