@@ -15,7 +15,7 @@ const api = new salestaxAPI({
 
 // Example query
 var query = {
-  zip: "90210"
+  zip: "64082"
 };
 
 // Make the API request using callback
