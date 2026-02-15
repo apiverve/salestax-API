@@ -1,1 +1,3 @@
-from .apiClient import SalestaxAPIClient
+from .apiClient import SalestaxAPIClient, SalestaxAPIClientError
+
+__all__ = ['SalestaxAPIClient', 'SalestaxAPIClientError']
