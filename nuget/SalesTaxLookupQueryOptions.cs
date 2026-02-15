@@ -11,8 +11,7 @@ namespace APIVerve.API.SalesTaxLookup
     public class SalesTaxLookupQueryOptions
     {
         /// <summary>
-        /// The zip code for which you want to get the sales tax rate (e.g., 90210)
-        /// Example: 90210
+        /// The zip code for which you want to get the sales tax rate
         /// </summary>
         [JsonProperty("zip")]
         public string Zip { get; set; }
