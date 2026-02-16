@@ -222,8 +222,9 @@ from apiverve_salestaxlookup.apiClient import SalestaxAPIClient
 
 api = SalestaxAPIClient("[YOUR_API_KEY]")
 
+query = { "zip": "64082" }
+
 try:
-    query = { "zip": "64082" }
     result = api.execute(query)
     print(result)
 finally:
