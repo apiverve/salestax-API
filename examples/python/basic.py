@@ -17,11 +17,14 @@ def call_salestax_api():
     Make a GET request to the Sales Tax Lookup API
     """
     try:
+        # Query parameters
+        params &#x3D; {&#x27;zip&#x27;: &#x27;64082&#x27;}
+
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.get(API_URL, headers=headers, params=params)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
