@@ -25,6 +25,9 @@ namespace APIVerve.API.SalesTaxLookup
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,21 +36,33 @@ namespace APIVerve.API.SalesTaxLookup
         public string State { get; set; }
 
         [JsonProperty("zip")]
-        public long Zip { get; set; }
+        public long? Zip { get; set; }
 
         [JsonProperty("region")]
         public string Region { get; set; }
 
         [JsonProperty("rate")]
-        public double Rate { get; set; }
+        public double? Rate { get; set; }
 
         [JsonProperty("county")]
-        public double County { get; set; }
+        public double? County { get; set; }
 
         [JsonProperty("city")]
-        public double City { get; set; }
+        public double? City { get; set; }
 
         [JsonProperty("special")]
-        public double Special { get; set; }
+        public double? Special { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
